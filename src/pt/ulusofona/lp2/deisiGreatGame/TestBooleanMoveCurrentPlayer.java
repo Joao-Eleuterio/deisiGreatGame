@@ -7,7 +7,6 @@ import static org.junit.Assert.assertFalse;
 
 
 public class TestBooleanMoveCurrentPlayer {
-
     @Test
     public void test01BooleanMoveCurrentPlayer() {
         GameManager manager = new GameManager();
