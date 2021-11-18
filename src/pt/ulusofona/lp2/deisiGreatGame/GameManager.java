@@ -16,6 +16,7 @@ public class GameManager {
     public GameManager() {
     }
 
+
     boolean createInitialBoard(String[][] playerInfo, int worldSize) {
         players.clear();
         nrTurnos = 0;
