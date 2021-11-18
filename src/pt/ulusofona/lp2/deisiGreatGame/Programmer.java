@@ -6,8 +6,10 @@ public class Programmer {
     String nome = "";
     ArrayList<String> linguagens;
     int id = 0;
-    pt.ulusofona.lp2.deisiGreatGame.ProgrammerColor cor;
+    ProgrammerColor cor;
     int posicao;
+    boolean defeat;
+    ArrayList<Ferramenta> ferramentas= new ArrayList<>();
 
     public Programmer(String nome, ArrayList<String> linguagens, int id, pt.ulusofona.lp2.deisiGreatGame.ProgrammerColor cor) {
         this.nome = nome;
@@ -15,8 +17,16 @@ public class Programmer {
         this.id = id;
         this.cor = cor;
         this.posicao = 1;
+        this.defeat=false;
     }
 
+
+    public boolean getDefeat(){
+        return defeat;
+    }
+    public void perdeu(){
+        this.defeat=true;
+    }
 
     public int getId() {
         return this.id;
@@ -26,7 +36,7 @@ public class Programmer {
         return this.nome == null ? "" : this.nome;
     }
 
-    public pt.ulusofona.lp2.deisiGreatGame.ProgrammerColor getColor() {
+    public ProgrammerColor getColor() {
         return cor;
     }
 
@@ -44,6 +54,24 @@ public class Programmer {
                 txtLinguagens.append("; ").append(this.linguagens.get(i));
             }
         }
-        return this.id + " | " + this.nome + " | " + this.posicao + " | " + txtLinguagens + " | Em Jogo";
+        StringBuilder txtFerramentas = new StringBuilder();
+        if(this.ferramentas.size()==0){
+            txtFerramentas.append("No tools");
+        }else{
+            for(int i=0;i<this.ferramentas.size();i++){
+                if (i == 0) {
+                    txtFerramentas.append(this.ferramentas.get(i));
+                }else{
+                    txtFerramentas.append("; ").append(this.ferramentas.get(i));
+                }
+            }
+        }
+        String txtEstado="";
+        if(getDefeat()){
+            txtEstado="Derrotado";
+        }else{
+            txtEstado="Em Jogo";
+        }
+        return this.id + " | " + this.nome + " | " + this.posicao + " | " + txtFerramentas + " | " + txtLinguagens + " | " + txtEstado;
     }
 }

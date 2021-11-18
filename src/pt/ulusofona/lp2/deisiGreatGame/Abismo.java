@@ -1,9 +1,6 @@
 package pt.ulusofona.lp2.deisiGreatGame;
 
-public class Abismo {
-    int id;
-    String titulo;
-
+public class Abismo extends Trap{
     public Abismo(int id) {
         this.id = id;
         switch (id) {
@@ -18,5 +15,22 @@ public class Abismo {
             case 8 -> this.titulo = "Ciclo infinito";
             case 9 -> this.titulo = "Segmentation Fault";
         }
+    }
+
+    @Override
+    public String getImage() {
+        return switch (titulo) {
+            case "Erro de sintaxe" -> "syntax.png";
+            case "Erro de lógica" -> "logic.png";
+            case "Exception" -> "exception.png";
+            case "File Not Found Exception" -> "file-not-found-exception.png";
+            case "Crash (aka Rebentanço)" -> "crash.png";
+            case "Duplicated Code"-> "duplicated-code.png";
+            case "Efeitos secundários" ->"secondary-effects.png";
+            case "Blue Screen of Death"-> "bsod.png";
+            case "Ciclo infinito" -> "infinite-loop.png";
+            case "Segmentation Fault" ->"core-dumped.png";
+            default -> null;
+        };
     }
 }
