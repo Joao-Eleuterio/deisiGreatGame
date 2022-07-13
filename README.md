@@ -4,3 +4,16 @@ No âmbito da cadeira Linguagens de Programação II foi nos fornecido três enu
 
 
 No final do trabalho realizado, os professores responsaveis pela parte prática da cadeira, decidiram que a minha nota seria de 18,2 valores.
+
+
+
+Modo de utilização de código:
+- Fazer download do código
+- No compilador abrir a pasta lib 
+- Clicar com o botão direito em LP2-GuiViewer2122-p2-1.0.0.jar
+- Escolher a opcao 'Add as Library'
+- clicar 'OK'
+- clicar em 'Add Configuration' no canto superior direito
+- clicar no '+' e 'Application'
+- Na main class colocar: 'pt.ulusofona.lp2.deisiGreatGame.guiSimulator.AppLauncherKt'
+- Se não conseguir ver pdf 'Como configurar o IDE para utilizar uma Biblioteca Externa em formato jar.pdf'
