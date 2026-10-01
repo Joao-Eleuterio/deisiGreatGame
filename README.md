@@ -1,19 +1,40 @@
 # deisiGreatGame
 
-No âmbito da cadeira Linguagens de Programação II foi nos fornecido três enunciados para desenvolvermos uma aplicação em Java que será uma especie de jogo do ganso com um percurso com vários abismos e ferramentas para tornar o jogo mais divertido. O jogo pode ser jogado de 2 a 4 pessoas. Tornei o jogo um pouco mais tematico sendo o tema de gruta, basicamente os jogadores são exploradores numa grupa e têm de sair dela!
+Turn-based multiplayer board game implemented on the JVM as a programming project.
 
+## Overview
 
-No final do trabalho realizado, os professores responsaveis pela parte prática da cadeira, decidiram que a minha nota seria de 18,2 valores.
+Players explore a cave-themed board and try to reach the end while dealing with hazards, tools and game events.
 
+The game supports **2 to 4 players** and includes a graphical viewer provided as an external library.
 
+## Features
 
-Modo de utilização de código:
-- Fazer download do código
-- No compilador abrir a pasta lib 
-- Clicar com o botão direito em LP2-GuiViewer2122-p2-1.0.0.jar
-- Escolher a opcao 'Add as Library'
-- clicar 'OK'
-- clicar em 'Add Configuration' no canto superior direito
-- clicar no '+' e 'Application'
-- Na main class colocar: 'pt.ulusofona.lp2.deisiGreatGame.guiSimulator.AppLauncherKt'
-- Se não conseguir ver pdf 'Como configurar o IDE para utilizar uma Biblioteca Externa em formato jar.pdf'
+- multiplayer turn-based gameplay
+- board movement and game-state management
+- hazards and tools
+- player progression
+- graphical game visualization
+- domain-oriented object modelling
+
+## Tech
+
+- JVM
+- Object-Oriented Programming
+- External JAR integration
+
+## Running the project
+
+The repository includes the required GUI library under `lib/`.
+
+Configure the provided JAR as a project dependency and use:
+
+```text
+pt.ulusofona.lp2.deisiGreatGame.guiSimulator.AppLauncherKt
+```
+
+as the application entry point.
+
+## Background
+
+Originally developed for a Programming Languages course, this project demonstrates object-oriented design, state management and implementation of non-trivial game rules.
